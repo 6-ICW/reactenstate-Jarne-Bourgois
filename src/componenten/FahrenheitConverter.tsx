@@ -1,17 +1,22 @@
+import { useState } from "react";
+
 interface Props {
   temperature: number;
   onSave: (naam: number) => void;
 }
 
 function FahrenheitConverter({ temperature, onSave }: Props) {
-  const toFahrenheit = ((temperature - 32) * 5) / 9;
+  const [toFahrenheit, setToFahrenheit] = useState(
+    ((temperature - 32) * 5) / 9
+  );
   return (
     <>
       <input
         type="text"
         key={toFahrenheit}
-        onChange={(e) => onSave(parseInt(e.target.value))}
+        onChange={(e) => setToFahrenheit(parseInt(e.target.value))}
       />
+      {console.log(toFahrenheit)}
     </>
   );
 }
