@@ -2,7 +2,10 @@ import CelsiusConverter from "./componenten/CelsiusConverter";
 import FahrenheitConverter from "./componenten/FahrenheitConverter";
 import { useState } from "react";
 
-function App() {
+// hier in moet ik de waardes die terug gestuurd worden van de converters beschikbaar maken voor gebruik
+interface Props {}
+
+function App({}: Props) {
   const [Celsius, setCelsius] = useState<number>(0);
   const [Fahrenheit, setFahrenheit] = useState<number>(0);
   return (

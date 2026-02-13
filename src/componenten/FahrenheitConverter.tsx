@@ -13,7 +13,7 @@ function FahrenheitConverter({ temperature, onSave }: Props) {
     <>
       <input
         type="text"
-        key={toFahrenheit}
+        key={toFahrenheit} // normaal moet er bij de onchange iets gebeuren waardoor ik de e.target.value terug stuur naar de app maar dat weet ik niet meer
         onChange={(e) => setToFahrenheit(parseInt(e.target.value))}
       />
       {console.log(toFahrenheit)}
